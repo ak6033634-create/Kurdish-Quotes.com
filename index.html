@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurdish Heritage Hub — Anas Saeed Omer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --emerald: #145c3b;
+            --gold: #eab308;
+            --cream: #fdfcf6;
+        }
+        body { font-family: 'Outfit', sans-serif; background-color: var(--cream); color: #1e293b; }
+        .kurdish { font-family: 'Amiri', serif; }
+        
+        /* MODERN GRAPHIC ELEMENTS */
+        .mountain-mask {
+            background: linear-gradient(rgba(20, 92, 59, 0.8), rgba(20, 92, 59, 0.4)), 
+                        url('https://images.unsplash.com/photo-1548013146-72479768bbaa?q=80&w=2070&auto=format&fit=crop');
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .sun-aura {
+            background: radial-gradient(circle, rgba(234, 179, 8, 0.4) 0%, transparent 70%);
+            filter: blur(40px);
+        }
+
+        /* FOLKLORIC PATTERN */
+        .kurdish-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23145c3b' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4v-4H4v4H0v2h4v4h2v-4h4v-2H6zM36 4v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 15px 35px rgba(20, 92, 59, 0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .glass-card:hover { transform: translateY(-10px) scale(1.02); box-shadow: 0 30px 60px rgba(20, 92, 59, 0.15); }
+
+        .sun-btn {
+            background: linear-gradient(135deg, #eab308, #ca8a04);
+            box-shadow: 0 10px 20px rgba(234, 179, 8, 0.3);
+        }
+
+        .author-tag {
+            background: linear-gradient(90deg, #145c3b, #2d7a58);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes sun-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .spin-slow { animation: sun-spin 20s linear infinite; }
+    </style>
+</head>
+<body class="kurdish-pattern">
+
+    <!-- MODERN CULTURAL HERO -->
+    <section class="relative min-h-[90vh] mountain-mask flex items-center justify-center text-white text-center p-8 overflow-hidden">
+        <div class="absolute inset-0 sun-aura"></div>
+        
+        <div class="relative z-10">
+            <!-- Animated Sun Motif -->
+            <div class="w-48 h-48 mx-auto mb-12 relative flex items-center justify-center">
+                <div class="absolute inset-0 bg-yellow-400 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+                <svg viewBox="0 0 100 100" class="w-40 h-40 text-yellow-400 spin-slow">
+                    <circle cx="50" cy="50" r="20" fill="currentColor" />
+                    <g stroke="currentColor" stroke-width="4">
+                        <line x1="50" y1="10" x2="50" y2="25" />
+                        <line x1="50" y1="75" x2="50" y2="90" />
+                        <line x1="10" y1="50" x2="25" y2="50" />
+                        <line x1="75" y1="50" x2="90" y2="50" />
+                        <line x1="21.7" y1="21.7" x2="32.3" y2="32.3" />
+                        <line x1="67.7" y1="67.7" x2="78.3" y2="78.3" />
+                        <line x1="21.7" y1="78.3" x2="32.3" y2="67.7" />
+                        <line x1="67.7" y1="32.3" x2="78.3" y2="21.7" />
+                    </g>
+                </svg>
+            </div>
+
+            <h1 class="kurdish text-8xl md:text-[10rem] font-bold mb-6 tracking-tight drop-shadow-2xl">دەنگی چیا</h1>
+            <p class="kurdish text-4xl md:text-5xl font-medium max-w-4xl mx-auto leading-relaxed text-yellow-50 shadow-black/20 drop-shadow-lg">
+                “کورد تەنها چیا هاوڕێیەتی”
+            </p>
+            
+            <div class="mt-16 flex flex-wrap justify-center gap-6">
+                <a href="#quotes" class="sun-btn px-10 py-5 rounded-full text-white font-black text-xl hover:scale-110 transition-transform">EXPLORE WISDOM</a>
+                <a href="#info" class="bg-white/10 backdrop-blur-md px-10 py-5 rounded-full text-white font-bold border border-white/30 hover:bg-white/20 transition-all">MEET CREATOR</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW FOLKLORIC QUOTES GRID -->
+    <section id="quotes" class="py-32 container mx-auto px-6">
+        <div class="mb-24 text-center">
+            <h2 class="kurdish text-6xl font-black text-emerald-900 mb-4">وتەی ناو دڵان</h2>
+            <div class="h-1.5 w-32 bg-yellow-500 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+            
+            <!-- Quote Card Loop -->
+            <div class="glass-card p-10 rounded-[40px]">
+                <p class="kurdish text-3xl font-bold text-emerald-900 mb-4 leading-relaxed">“ئاش لە خەیاڵێک ئاشەوان لە خەیاڵێک”</p>
+                <p class="text-slate-500 italic">"The mill has one dream, the miller has another."</p>
+            </div>
+
+            <div class="glass-card p-10 rounded-[40px] border-emerald-600/20">
+                <p class="kurdish text-3xl font-bold text-emerald-900 mb-4 leading-relaxed">“ئەگەر بکەوی بەر هەڵمەتی شێر قەت پەنا نابەی بۆ ڕێوی بێخێر”</p>
+                <p class="text-slate-500 italic">"If you are attacked by a lion, never seek shelter with a useless fox."</p>
+            </div>
+
+            <div class="glass-card p-10 rounded-[40px] border-yellow-500/20">
+                <p class="kurdish text-3xl font-bold text-emerald-900 mb-4 leading-relaxed">“کەڵەشێریش نەبێت ڕۆش هەر دەبێتەوە”</p>
+                <p class="text-slate-500 italic">"The sun will rise even if there is no rooster to crow."</p>
+            </div>
+
+            <div class="glass-card p-10 rounded-[40px]">
+                <p class="kurdish text-3xl font-bold text-emerald-900 mb-4 leading-relaxed">“گۆشتی ڕانی خۆت بخۆ لە منەتی قەساب باشترە”</p>
+                <p class="text-slate-500 italic">"Eat your own meat rather than owe a favor to a butcher."</p>
+            </div>
+
+            <div class="glass-card p-10 rounded-[40px]">
+                <p class="kurdish text-3xl font-bold text-emerald-900 mb-4 leading-relaxed">“مار بە قسەی خۆش دێتە دەرەوە”</p>
+                <p class="text-slate-500 italic">"A snake will come out of its hole with kind words."</p>
+            </div>
+
+            <div class="glass-card p-10 rounded-[40px]">
+                <p class="kurdish text-3xl font-bold text-emerald-900 mb-4 leading-relaxed">“چەپڵە بە یەک دەست لێ نادرێ”</p>
+                <p class="text-slate-500 italic">"You cannot clap with one hand." (Unity is strength)</p>
+            </div>
+
+            <div class="glass-card p-10 rounded-[40px]">
+                <p class="kurdish text-3xl font-bold text-emerald-900 mb-4 leading-relaxed">“دەمی پێ ناگات دەڵێت ترشە”</p>
+                <p class="text-slate-500 italic">"If he can't reach the grapes, he says they are sour."</p>
+            </div>
+
+            <div class="glass-card p-10 rounded-[40px]">
+                <p class="kurdish text-3xl font-bold text-emerald-900 mb-4 leading-relaxed">“قەرز کۆن دەبێت بەڵام نافەوتێت”</p>
+                <p class="text-slate-500 italic">"A debt grows old, but it never disappears."</p>
+            </div>
+
+            <div class="glass-card p-10 rounded-[40px]">
+                <p class="kurdish text-3xl font-bold text-emerald-900 mb-4 leading-relaxed">“کەس بەدۆی خۆی ناڵێ ترشە”</p>
+                <p class="text-slate-500 italic">"No one says their own yogurt is sour."</p>
+            </div>
+
+            <div class="glass-card p-10 rounded-[40px]">
+                <p class="kurdish text-3xl font-bold text-emerald-900 mb-4 leading-relaxed">“پەتی درۆ کورتە”</p>
+                <p class="text-slate-500 italic">"The rope of a lie is short."</p>
+            </div>
+            
+            <div class="glass-card p-10 rounded-[40px]">
+                <p class="kurdish text-3xl font-bold text-emerald-900 mb-4 leading-relaxed">“جام پڕبوو لێی ئەڕژێ”</p>
+                <p class="text-slate-500 italic">"When the cup is full, it overflows."</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LEADERS: SPECIAL MUSEUM DISPLAY -->
+    <section id="info" class="py-32 bg-white/50">
+        <div class="container mx-auto px-6 space-y-32">
+            
+            <!-- CREATOR -->
+            <div class="flex flex-col lg:flex-row items-center gap-20">
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-emerald-600 rounded-[50px] rotate-6 group-hover:rotate-0 transition-all duration-500"></div>
+                    <div class="relative w-80 h-80 overflow-hidden rounded-[50px] border-8 border-white shadow-2xl">
+                        <img src="https://ui-avatars.com/api/?name=Anas+Saeed+Omer&background=145c3b&color=fff&size=400" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="flex-1 text-center lg:text-right">
+                    <h2 class="text-6xl font-black text-emerald-900 mb-8">About the Creator</h2>
+                    <div class="grid gap-6">
+                        <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 flex items-center justify-between">
+                            <span class="text-4xl">ANAS SAEED OMER</span>
+                            <span class="text-slate-400 font-bold tracking-widest uppercase text-xs">Name</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 flex items-center justify-between">
+                            <span class="text-2xl font-bold text-emerald-700">anassaeedd8@gmail.com</span>
+                            <span class="text-slate-400 font-bold tracking-widest uppercase text-xs">Email</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 flex items-center justify-between">
+                            <span class="text-2xl font-bold">07701745053</span>
+                            <span class="text-slate-400 font-bold tracking-widest uppercase text-xs">Phone</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QAZI MUHAMMAD -->
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-20">
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-yellow-500 rounded-[50px] -rotate-6 group-hover:rotate-0 transition-all duration-500"></div>
+                    <div class="relative w-80 h-[450px] overflow-hidden rounded-[50px] border-8 border-white shadow-2xl bg-slate-950">
+                        <img src="https://api.dicebear.com/7.x/initials/svg?seed=QM&backgroundColor=eab308" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="flex-1 text-center lg:text-left">
+                    <h2 class="kurdish text-7xl font-black text-emerald-900 mb-8">پێشەوا قازی محەممەد</h2>
+                    <div class="kurdish text-3xl leading-relaxed text-slate-600 space-y-6">
+                        <p>پێشەوا قازی محەممەد (١٩٠٠ - ١٩٤٧) دامەزرێنەر و یەکەم سەرۆک کۆماری کوردستان بوو لە مەھاباد.</p>
+                        <p class="text-xl italic font-serif text-emerald-800 border-r-4 border-yellow-500 pr-8">
+                            "He dedicated his life to Kurdish identity and officially named the army 'Peshmerga'."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SALAHADIN -->
+            <div class="bg-emerald-900 rounded-[60px] p-12 md:p-24 text-white relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-32 -mt-32"></div>
+                <div class="flex flex-col lg:flex-row items-center gap-20 relative z-10">
+                    <div class="w-80 h-80 rounded-[50px] border-8 border-white/20 overflow-hidden shadow-2xl">
+                        <img src="https://api.dicebear.com/7.x/initials/svg?seed=SA&backgroundColor=ffffff&color=145c3b" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="kurdish text-7xl font-black mb-8 text-yellow-400">سەلاحەدینی ئەییووبی</h2>
+                        <div class="kurdish text-3xl leading-relaxed text-emerald-50 space-y-8">
+                            <p>سەلاحەدینی ئەییووبی (١١٣٧-١١٩٣) دامەزرێنەر و یەکەم سوڵتانی میسر و سووریا بوو. ئەو سەرکردەیەکی لێھاتووی کورد و هێمای مەردایەتی بوو.</p>
+                            <p class="text-xl font-serif text-yellow-500/80">"The Kurdish hero of history who taught the world the meaning of chivalry."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ULTRA-MODERN FOOTER -->
+    <footer class="py-32 bg-slate-950 text-white text-center relative overflow-hidden">
+        <div class="kurdish text-4xl font-bold mb-8 opacity-80">بژی کوردستان</div>
+        <div class="flex justify-center gap-12 mb-12 opacity-40">
+            <div class="w-12 h-1 bg-yellow-400"></div>
+            <div class="w-12 h-1 bg-white"></div>
+            <div class="w-12 h-1 bg-emerald-600"></div>
+        </div>
+        <p class="text-emerald-500 font-black tracking-[0.4em] text-sm">DESIGNED BY ANAS SAEED OMER</p>
+    </footer>
+
+</body>
+</html>
